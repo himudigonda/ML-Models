@@ -1,4 +1,4 @@
-
+#! /usr/bin/python3
 # @author: @ruhend (Mudigonda Himansh)
 # Linear Regression
 
