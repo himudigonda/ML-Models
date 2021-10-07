@@ -16,20 +16,19 @@ print("Shape of the train_data is : ", train_data.shape)
 print("Shape of the test_data is  : ", test_data.shape)
 
 # Initializing train x and y
-train_x = train_data.drop(columns = ['Survived'], axis = 1)
+train_x = train_data.drop(columns=['Survived'], axis=1)
 train_y = train_data['Survived']
 
 #Initializing test x and y
-test_x = test_data.drop(columns = ['Survived'], axis = 1)
+test_x = test_data.drop(columns=['Survived'], axis=1)
 test_y = test_data['Survived']
-
 
 # Creating the instance of the model
 model = LogisticRegression(solver='lbfgs', max_iter=1000)
 
-# Fit the model with the training data 
-model.fit(train_x,train_y)
- 
+# Fit the model with the training data
+model.fit(train_x, train_y)
+
 # Calculate the coeffecient of the model
 print("********************************************************************")
 print("Coeffecient of the model   \n: ", model.coef_)
@@ -45,7 +44,7 @@ print("Target on Train Data       \n: ", predict_train)
 
 accuracy_train = accuracy_score(train_y, predict_train)
 print("********************************************************************")
-print("Accuracy on the Train Data \n: ",accuracy_train)
+print("Accuracy on the Train Data \n: ", accuracy_train)
 
 # Predict the target on the Test Data
 predict_test = model.predict(test_x)
